@@ -1,7 +1,7 @@
 # Cussen's Algorithm 
 ## Cussen's Algorithm is an algorithm which can be used to multiply a scalar multiplier with an array
 ## It involves 5 major steps
- 1. Sort: Begin by sorting the given vector [v1,...,vn] in
+ 1. <i>Sort</i>: Begin by sorting the given vector [v1,...,vn] in
  a way that eliminates duplicates. The resulting sorted
  vector [s1,...,sm] has s1 < s2 < ··· < sm. It is
  necessary to create an array of pointers [p1,...,pn],
