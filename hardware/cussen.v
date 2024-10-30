@@ -20,76 +20,75 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module cussen(
-    input wire clk,
-    input wire [8*9-1:0] in,      // Concatenated input array (9 elements of 8 bits each)
-    output reg [8*9-1:0] out      // Concatenated output array (9 elements of 8 bits each)
+module cussen (
+  input  wire clk,
+  input  wire [7:0] in1, in2, in3, in4, in5, in6, in7, in8, in9,
+  output reg  [7:0] out1, out2, out3, out4, out5, out6, out7, out8, out9
 );
 
-    reg [7:0] data[1:9];          // Internal array for sorting
-    reg [7:0] array[1:9];
-    integer i, j;
+  // Registers to hold the input data
+  reg [7:0] data1, data2, data3, data4, data5, data6, data7, data8, data9;
+
+  // Task to swap two 8-bit values if the first is greater than the second
+  task swap_if_greater(
+      inout reg [7:0] a, 
+      inout reg [7:0] b
+  );
     reg [7:0] temp;
-
-    // Task Declaration for Bubble Sort
-    task bubble_sort;
-        inout [7:0] arr[1:9];    // Task for bubble sort logic
-        integer i, j;
-        reg [7:0] temp;
-        begin
-            for (i = 9; i > 0; i = i - 1) 
-            begin
-                for (j = 1; j < i; j = j + 1) 
-                begin
-                    if (arr[j] > arr[j + 1]) 
-                    begin
-                        temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                    end
-                end
-            end
-        end
-    endtask
-
-    // Load concatenated input into internal array `data`
-    always @(posedge clk) begin
-        data[1] <= in[8*1-1:8*0];
-        data[2] <= in[8*2-1:8*1];
-        data[3] <= in[8*3-1:8*2];
-        data[4] <= in[8*4-1:8*3];
-        data[5] <= in[8*5-1:8*4];
-        data[6] <= in[8*6-1:8*5];
-        data[7] <= in[8*7-1:8*6];
-        data[8] <= in[8*8-1:8*7];
-        data[9] <= in[8*9-1:8*8];
+    begin
+      if (a > b) begin
+        temp = a;
+        a = b;
+        b = temp;
+      end
     end
+  endtask
 
-    // Call the bubble_sort task and assign the output
-    always @(posedge clk) begin
-        array[1] = data[1];
-        array[2] = data[2];
-        array[3] = data[3];
-        array[4] = data[4];
-        array[5] = data[5];
-        array[6] = data[6];
-        array[7] = data[7];
-        array[8] = data[8];
-        array[9] = data[9];
-
-        // Call bubble_sort task
-        bubble_sort(array);
-
-        // Assign sorted values to concatenated output
-        out[8*1-1:8*0] <= array[1];
-        out[8*2-1:8*1] <= array[2];
-        out[8*3-1:8*2] <= array[3];
-        out[8*4-1:8*3] <= array[4];
-        out[8*5-1:8*4] <= array[5];
-        out[8*6-1:8*5] <= array[6];
-        out[8*7-1:8*6] <= array[7];
-        out[8*8-1:8*7] <= array[8];
-        out[8*9-1:8*8] <= array[9];
+  // Bubble Sort Task
+  task bubblesort;
+    integer i, j;
+    begin
+      // Perform bubble sort through multiple passes
+      for (i = 8; i > 0; i = i - 1) begin
+        swap_if_greater(data1, data2);
+        swap_if_greater(data2, data3);
+        swap_if_greater(data3, data4);
+        swap_if_greater(data4, data5);
+        swap_if_greater(data5, data6);
+        swap_if_greater(data6, data7);
+        swap_if_greater(data7, data8);
+        swap_if_greater(data8, data9);
+      end
     end
+  endtask
 
+  // Sequential logic to load data and trigger bubble sort
+  always @(posedge clk) begin
+    // Load inputs into data registers
+    data1 <= in1;
+    data2 <= in2;
+    data3 <= in3;
+    data4 <= in4;
+    data5 <= in5;
+    data6 <= in6;
+    data7 <= in7;
+    data8 <= in8;
+    data9 <= in9;
+    
+    // Call the bubblesort task to sort data
+    bubblesort();
+
+    // Assign sorted values to the outputs
+    out1 <= data1;
+    out2 <= data2;
+    out3 <= data3;
+    out4 <= data4;
+    out5 <= data5;
+    out6 <= data6;
+    out7 <= data7;
+    out8 <= data8;
+    out9 <= data9;
+  end
 endmodule
+
+
