@@ -1,7 +1,7 @@
 # Cussen's Algorithm 
 ## Cussen's Algorithm is an algorithm which can be used to multiply a scalar multiplier with an array
 ## It involves 5 major steps
- 1. <i>Sort</i>: Begin by sorting the given vector [v1,...,vn] in a way that eliminates duplicates. The resulting sorted vector [s1,...,sm] has s1 < s2 < ··· < sm. It is necessary to create an array of pointers [p1,...,pn], where pi gives the unique value j such that vi = sj. These pointers are suggested by the red, dotted lines in Fig. 1.2
+ 1. <i>Sort</i>: Begin by sorting the given vector [v1,...,vn] in a way that eliminates duplicates. The resulting sorted vector [s1,...,sm] has s1 < s2 < ··· < sm. It is necessary to create an array of pointers [p1,...,pn], where pi gives the unique value j such that vi = sj. These pointers are suggested by the red, dotted lines in Figure
  2. <i>Differences</i>: Construct a new vector [d1,...,dm] giving the differences between successive elements of the sorted array, with an imaginary 0 preceding the first number, That is, d1 = s1 and di = si − si−1 for i =2,3,...,m.
     
  3. <i>Recursion</i>: Either by using Russian-Peasants multiplication as a base case, or using this algorithm recursively, produce the vector-scalar product [cd1,...,cdm].
