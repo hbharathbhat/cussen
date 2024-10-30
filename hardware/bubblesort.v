@@ -1,4 +1,24 @@
-`timescale 1 ns / 1 ps
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/29/2024 08:44:16 AM
+// Design Name: 
+// Module Name: bubblesort
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module bubblesort (
   input  wire clk,
@@ -58,3 +78,4 @@ module bubblesort (
       out9 <= array[9];
   end
   endmodule
+

@@ -118,6 +118,30 @@ module sorting_and_removal (
            temp_out[6], temp_out[7], temp_out[8], temp_out[9]};
     end
   endtask
+  
+  // Russian Peasant Multiplication 
+   task russian_peasant_multiply(
+        input [7:0] multiplicand,
+        input [7:0] multiplier,
+        output reg [15:0] result
+    );
+        integer i;
+
+        begin
+            result = 0;
+
+            // Russian Peasant Multiplication algorithm
+            for (i = 0; i < 8; i = i + 1) 
+            begin
+                if (multiplier[0] == 1) 
+                begin
+                    result = result + multiplicand;
+                end
+                multiplicand = multiplicand << 1;  // Double the multiplicand
+                multiplier = multiplier >> 1;      // Half the multiplier
+            end
+        end
+    endtask
 
   // Always block to perform bubble sort and remove duplicates
   always @(posedge clk) begin
@@ -140,5 +164,4 @@ module sorting_and_removal (
   end
 
 endmodule
-
 
