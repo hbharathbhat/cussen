@@ -1,6 +1,5 @@
 ## Sorting, Duplicate Removal, Successive Difference, Pointers Waveform
-![image](https://github.com/user-attachments/assets/36e00eef-90ed-43e0-a425-91134f7c8f5e)
-
+![image](https://github.com/user-attachments/assets/7f65287f-f78f-4cd1-81e4-d3462f40d477)
 
 ## Sorting and Removal Waveform
 ![image](https://github.com/user-attachments/assets/4f4e1c7d-5796-4e0e-a0d4-68ebc6fad874)
