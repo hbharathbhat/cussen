@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 29.10.2024 09:16:08
+// Create Date: 10/30/2024 12:46:09 PM
 // Design Name: 
 // Module Name: duplicate_removal
 // Project Name: 
@@ -57,7 +57,3 @@ module duplicate_removal #(parameter N = 8) (
     end
 
 endmodule
-
-
-
-
