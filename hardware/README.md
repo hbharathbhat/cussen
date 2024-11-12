@@ -1,6 +1,7 @@
 ## Sorting, Duplicate Removal, Successive Difference, Pointers Waveform
 ![image](https://github.com/user-attachments/assets/7f65287f-f78f-4cd1-81e4-d3462f40d477)
-
+## Backtracing Waveform
+![image](https://github.com/user-attachments/assets/9adc3e01-628e-4657-8f73-8fdc78372fa3)
 ## Sorting and Removal Waveform
 ![image](https://github.com/user-attachments/assets/4f4e1c7d-5796-4e0e-a0d4-68ebc6fad874)
 ## Russian Peasant Multiplication Waveform
