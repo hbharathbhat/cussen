@@ -9,3 +9,9 @@
  5. <i>Follow Pointers</i>: For each vi, the pointer pi is that j such that vi = sj. Therefore, cpi = csj. We may therefore copy the value csj just computed at the previous step and make that be cpi.
 
 ![image](https://github.com/user-attachments/assets/c75a5812-cd48-4997-8ae5-1abe1dc84dbb)
+
+## Hardware Implementation of Cussen's Algorithm
+#### Top Module cussen_repeat
+##### You can get all the waveforms<a href="https://drive.google.com/drive/folders/1k_dYr3Eky9psMXh8bcZAQHAEZvKppR9T?usp=sharing"> here</a>
+### Synthesis Results (synthesized on Xilinx Vivado)
+![cussen](https://github.com/user-attachments/assets/be1fca00-e59b-4495-9062-23f0232a96dd)
