@@ -12,6 +12,12 @@
 
 ## Hardware Implementation of Cussen's Algorithm
 #### Top Module cussen_repeat
-##### You can get all the waveforms<a href="https://drive.google.com/drive/folders/1k_dYr3Eky9psMXh8bcZAQHAEZvKppR9T?usp=sharing"> here</a>
+#### You can get all the waveforms<a href="https://drive.google.com/drive/folders/1k_dYr3Eky9psMXh8bcZAQHAEZvKppR9T?usp=sharing"> here</a>
 ### Synthesis Results (synthesized on Xilinx Vivado)
 ![cussen](https://github.com/user-attachments/assets/be1fca00-e59b-4495-9062-23f0232a96dd)
+### Block Diagram
+![image](https://github.com/user-attachments/assets/55c945ad-c6f7-4e1b-9c39-e14ba9113dd6)
+![image](https://github.com/user-attachments/assets/20946bb3-24b8-417c-ad71-56b1c53c0c55)
+![image](https://github.com/user-attachments/assets/40150c98-61d3-413b-8f57-23ccf36dd2e4)
+![image](https://github.com/user-attachments/assets/5b953a58-4a36-4581-a249-49f1fafc8198)
+
